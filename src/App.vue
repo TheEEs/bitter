@@ -1,27 +1,48 @@
 <template>
-  <div class="bg-orange-400 w-screen flex-wrap h-screen flex justify-center">
-    <div></div>
-    <div class="bg-white shadow-lg self-end sm:max-w-lg w-full py-10 h-3/5 sm:h-2/5 rounded-t-2xl px-6">
-      <h2 class="text-3xl font-semibold text-coolGray-500 font-sans border-l-4 border-orange-400 pl-3 inline">
-        Thao tác với các bit
-      </h2>
-      <section class="mt-6">
-        <p class="font-mono text-coolGray-700">Các phép bitwise là các phép toán giúp lập trình viên thao tác với các bit dữ liệu.</p>
-        <ul class="ml-4 list-disc font-mono mt-2">
-          <li>
-            <p>Nhấn vào từng bit để đảo giá trị của bit đó</p>
-          </li>
-        </ul>
-      </section>
-    </div>
+  <div>
+    <Slide>
+    <template v-slot:title>
+      Hệ nhị phân
+    </template>
+    <template v-slot:description>
+      "Mỗi bit dữ liệu trong máy tính chỉ thể hiện được một trong hai số <Badge>1</Badge> hoặc <Badge>0</Badge>.
+      Các bit liền kề nhau, luôn phiên bật/tắt sẽ tạo ra những số khác nhau"
+    </template>
+    <template v-slot:direction>
+      Nhấn vào một bit bất kỳ để thay đổi giá trị của bit đó
+    </template>
+    <template v-slot:program>
+      <SingleByte />
+    </template>
+  </Slide>
+  <Slide>
+    <template v-slot:title>
+      Số có dấu và số không dấu
+    </template>
+    <template v-slot:description>
+      "Với số không dấu, mọi bit đều được sử dụng để biểu diễn giá trị. Với số có dấu, bit đầu tiên được dùng để biểu diễn dấu"
+    </template>
+    <template v-slot:direction>
+      Nhấn vào một bit bất kỳ để thay đổi giá trị của bit đó
+    </template>
+    <template v-slot:program>
+      <signed-byte />
+    </template>
+  </Slide>
   </div>
+  
 </template>
 
 <script>
+import Slide from './components/slide.vue';
+import SingleByte from "./components/programs/byte.vue"
+import SignedByte from "./components/programs/signed_byte"
 export default {
   name: "App",
   components: {
-    
+    Slide,
+    SingleByte,
+    SignedByte
   },
   data(){
     return {
