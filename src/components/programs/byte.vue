@@ -1,46 +1,17 @@
 <template>
   <div
-    class="
-      w-11/12
-      mt-12
-      sm:w-full
-      flex-wrap
-      mx-auto
-      flex
-      justify-around
-      items-center
-    "
+    class="w-11/12 mt-12 sm:w-full flex-wrap mx-auto flex justify-around items-center"
   >
     <div
       @click="updateBit(i)"
       v-for="(b, i) in byte"
       :key="i"
-      class="
-        text-coolGray-600
-        self-end
-        bg-coolGray-200
-        font-bold
-        text-2xl
-        px-3
-        py-2
-        hover:bg-orange-200
-        cursor-pointer
-        rounded-md
-      "
+      class="text-coolGray-600 self-end bg-coolGray-200 font-bold text-2xl px-3 py-2 hover:bg-orange-200 cursor-pointer rounded-md"
     >
       {{ b }}
     </div>
     <p
-      class="
-        w-full
-        self-start
-        mt-6
-        text-center
-        font-bold
-        text-white
-        font-sans
-        text-7xl
-      "
+      class="w-full self-start mt-6 text-center font-bold text-white font-sans text-7xl"
     >
       {{ number }}
     </p>
