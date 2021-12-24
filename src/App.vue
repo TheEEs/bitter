@@ -38,14 +38,44 @@
       <template v-slot:default> Tìm số lớn nhất </template>
       <template v-slot:title>Tìm số lớn nhất </template>
       <template v-slot:description>
-        Tips: Dùng một biến <badge>a</badge> để chứa số lớn nhất. Nếu tìm được một số lớn hơn, ta sẽ gán số đó cho
-        <badge>a</badge> 
+        Tips: Dùng một biến <badge>max</badge> để lưu trữ số lớn nhất. Nếu tìm
+        được một số lớn hơn, ta sẽ gán số đó cho
+        <badge>max</badge>
       </template>
       <template v-slot:direction>
         Click vào mũi tên để thấy các bước tiếp theo
       </template>
       <template v-slot:program>
         <MaxNumber />
+      </template>
+    </Slide>
+    <Slide>
+      <template v-slot:default> Sắp xếp mảng theo thứ tự tăng dần</template>
+      <template v-slot:title>Sắp xếp mảng</template>
+      <template v-slot:description>
+        Sau khi tìm ra số lớn nhất, ta xóa số đó trong mảng gốc đồng thời thêm
+        số đó vào cuối mảng kết quả.
+      </template>
+      <template v-slot:direction>
+        Click vào biểu tượng
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 inline text-orange-300"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"
+          />
+        </svg>
+        để thấy các bước tiếp theo
+      </template>
+      <template v-slot:program>
+        <Sort />
       </template>
     </Slide>
   </div>
@@ -55,8 +85,9 @@
 import Slide from "./components/slide.vue";
 import SingleByte from "./components/programs/byte.vue";
 import SignedByte from "./components/programs/signed_byte.vue";
-import MaxNumber from "./components/programs/max_number.vue"
-import Badge from './components/supports/badge.vue';
+import MaxNumber from "./components/programs/max_number.vue";
+import Badge from "./components/supports/badge.vue";
+import Sort from "./components/programs/sort.vue";
 export default {
   name: "App",
   components: {
@@ -64,7 +95,8 @@ export default {
     SingleByte,
     SignedByte,
     MaxNumber,
-    Badge
+    Badge,
+    Sort,
   },
   data() {
     return {};
