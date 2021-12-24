@@ -53,14 +53,14 @@
       <template v-slot:default> Sắp xếp mảng theo thứ tự tăng dần</template>
       <template v-slot:title>Sắp xếp mảng</template>
       <template v-slot:description>
-        Sau khi tìm ra số lớn nhất, ta xóa số đó trong mảng gốc đồng thời thêm
+        Sau khi tìm ra số  nhỏ nhất, ta xóa số đó trong mảng gốc đồng thời thêm
         số đó vào cuối mảng kết quả.
       </template>
       <template v-slot:direction>
         Click vào biểu tượng
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 inline text-orange-300"
+          class="h-6 w-6 inline text-orange-600"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
