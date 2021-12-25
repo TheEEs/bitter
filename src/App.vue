@@ -1,6 +1,20 @@
 <template>
   <div class="w-full">
     <Slide>
+      <template v-slot:default>Sử dụng RAM để lưu trữ dữ liệu</template>
+      <template v-slot:title>Biến số - variables</template>
+      <template v-slot:description>
+        RAM là nơi lưu trữ dữ liệu của chương trình khi chạy. Giả sử chương trình của bạn thực hiện việc 
+        tính tổng các số nguyên tố từ 1->1000, bạn sẽ cần một vùng nhớ trong RAM để lưu trữ cái tổng đó.
+      </template>
+      <template v-slot:direction>
+        Nhấn vào một bit bất kỳ để thay đổi giá trị của bit đó
+      </template>
+      <template v-slot:program>
+        
+      </template>
+    </Slide>
+    <Slide>
       <template v-slot:title> Hệ nhị phân </template>
       <template v-slot:description>
         "Mỗi bit dữ liệu trong máy tính chỉ thể hiện được một trong hai số
