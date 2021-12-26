@@ -4,14 +4,22 @@
       <template v-slot:default>Sử dụng RAM để lưu trữ dữ liệu</template>
       <template v-slot:title>Biến số - variables</template>
       <template v-slot:description>
-        RAM là nơi lưu trữ dữ liệu của chương trình khi chạy. Giả sử chương trình của bạn thực hiện việc 
-        tính tổng các số nguyên tố từ 1->1000, bạn sẽ cần một vùng nhớ trong RAM để lưu trữ cái tổng đó.
+        <ul class="list-disc ml-4 mr-2">
+          <li>
+            RAM là nơi lưu trữ dữ liệu của chương trình khi chạy. Giả sử chương
+            trình của bạn thực hiện việc tính tổng các số nguyên tố từ 1->1000,
+            bạn sẽ cần một vùng nhớ trong RAM để lưu trữ cái tổng đó. Vùng nhớ ấy được gọi là <badge>Biến</badge>.
+          </li>
+          <li>
+            Dung lượng lưu trữ của một biến được quyết định bởi kiểu dữ liệu của biến đó.
+          </li>
+        </ul>
       </template>
       <template v-slot:direction>
-        Nhấn vào một bit bất kỳ để thay đổi giá trị của bit đó
+        Thay đổi kiểu dữ liệu để xem dung lượng
       </template>
       <template v-slot:program>
-        
+        <Variable />
       </template>
     </Slide>
     <Slide>
@@ -67,7 +75,7 @@
       <template v-slot:default> Sắp xếp mảng theo thứ tự tăng dần</template>
       <template v-slot:title>Sắp xếp mảng</template>
       <template v-slot:description>
-        Sau khi tìm ra số  nhỏ nhất, ta xóa số đó trong mảng gốc đồng thời thêm
+        Sau khi tìm ra số nhỏ nhất, ta xóa số đó trong mảng gốc đồng thời thêm
         số đó vào cuối mảng kết quả.
       </template>
       <template v-slot:direction>
@@ -96,6 +104,7 @@
 </template>
 
 <script>
+import Variable from "./components/programs/variables.vue"
 import Slide from "./components/slide.vue";
 import SingleByte from "./components/programs/byte.vue";
 import SignedByte from "./components/programs/signed_byte.vue";
@@ -111,6 +120,7 @@ export default {
     MaxNumber,
     Badge,
     Sort,
+    Variable
   },
   data() {
     return {};
